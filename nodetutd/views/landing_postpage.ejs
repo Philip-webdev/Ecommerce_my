@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <%- include('header'); %>
+    </head>
+
+
+    <%  const keys = Object.keys(blogs); %>
+   <% for (let key of keys) { %>
+<% const src = blogs[key].photo %>
+<div id="title-body">
+    <img src= <%= src %> />
+   <div id="title"><%= blogs[key].title %></div> 
+</div>
+</br></br></br>
+<!--This is the main body where all write-ups-->
+<div id="post-body">
+    <%= blogs[key].body %>
+</div>
+<% }%>
+<div id="forwards&follow"></div>
+
+
+
+<div>
+    <%- include('footer'); %>
+</div>
+</html>

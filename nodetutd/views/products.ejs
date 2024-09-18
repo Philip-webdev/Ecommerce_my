@@ -1,0 +1,80 @@
+<html><head>
+    <style>
+      @media only screen and (max-width: 320px) {
+      
+        #bigg-cont{
+          zoom:40%;
+        }
+    }
+    #bigg-cont{
+      zoom: 60%;
+    }
+    .cardd {
+        text-align: center;
+        margin:10px;
+        position: inherit;
+        border: 1px black;
+        background-color: whitesmoke;
+      }
+      .cardd :hover{
+        transition: 0.3s;
+      }
+      .price {
+        color: grey;
+      }
+      
+      .cardd button {
+        border: none;
+        outline: 0;
+        padding: 7px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        pointer-events: none;
+        cursor: pointer;
+       
+      }
+      
+      .cardd button:hover {
+        opacity: 0.7;
+      }
+      #bigg-cont{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-around;
+      }
+      
+      img :hover{
+        animation: zoom-in-zoom-out 1s ease infinite;
+      }
+    
+    </style>
+</head>
+
+<div id="bigg-cont">
+    <div class="cardd">
+        <img src="http://127.0.0.1:8080/public/Portable_Humidifier_Air_Cooler_-_Black-removebg-preview.png" alt="" width="150px"heigh='170px'>
+        <p>Tailored Jeans</p>
+        <p class="price">$19.99</p>
+       
+        <p><button>Add to Cart</button></p>
+      </div>
+
+      <div class="cardd">
+        <div id="noimg"><img src="http://localhost:8080/public/FILIEKEU_Men_Smart_Watch_for_Android_iOS__Bluetooth_Calls_Voice_Chat_with_Heart_Rate_Sleep_Monitor_Fitness_Tracker__1_3__Full_Touch_Screen_IP67_Waterproof_Stainless_Steel_Activity_Tracker_for_Men-remo.png" alt="" width="150px"heigh='170px'></div>
+        <p>Tailored Jeans</p>
+        <p class="price">$19.99</p>
+       
+        <p><button>Add to Cart</button></p>
+      </div>
+
+      <div class="cardd">
+        <img src="http://127.0.0.1:8080/public/Portable_Air_Conditioner-5200mAh_Rechargeable_Personal_Air_Cooler_with_3_Speeds_Duration_5-10_hrs__Quiet_Mini_Air_Conditioner_Fan__Desk_Cooling_Fan_for_Home__Bedroom__Travel__and_Office-removebg-previ.png" alt="" width="140px"heigh='170px'>
+        <p>Tailored Jeans</p>
+        <p class="price">$19.99</p>
+       
+        <p><button>Add to Cart</button></p>
+      </div>
+      
+    </div>
+</html>

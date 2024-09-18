@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        #user{
+            color: grey;
+            border-top:  none;
+            border-left:  none;
+            border-right: none;
+            border-width: 1px;
+            width: 70%;
+            border-color: grey;
+        }
+        #photo{
+            border-top:  none;
+            border-left:  none;
+            border-right: none;
+            border-width: 1px;
+        }
+        #postbody{
+            height:70px;
+            color: grey;
+            width: 70%;
+            border-color:  grey;
+            border-width: 1px;
+            border-radius: 7px;
+            border-color:  grey;
+        }
+        body{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #create{
+            align-self: center;
+            height:40px;
+            border-color:  grey;
+            border-radius: 7px;
+            border-width: 1px;
+            border-color:  grey;
+            width: 40%;
+        }
+        #pass{
+            color: grey;
+            border-top:  none;
+            border-left:  none;
+            border-right: none;
+            border-width: 1px;
+            width: 70%;
+            border-color: grey;
+        }
+    </style>
+</head>
+<body>
+   
+<form action="/login" method="POST">
+    <input type="text" id="user" name="username" placeholder="username"><br>
+    <br><br>
+    <input type="text" id="pass" name="password" placeholder="password"><br>
+   <br><br>
+    <button type="submit" id="create">Login</button>
+</form>
+<!--But the following code posts to a page separate from blogs, it's the reading page!-->
+
+ </body>
+</html>

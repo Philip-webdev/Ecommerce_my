@@ -1,0 +1,94 @@
+<!Doctype html>
+    <style>
+      .html{
+        width: fit-content;
+      }
+    .card {
+  /* Add shadows to create the "card" effect */
+  transition: 0.3s;
+  width: calc(90% / 3);
+  max-width: 150px;
+  margin: 10px;
+  justify-self: space-evenly;
+  zoom:60%;
+}
+#big-cont{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.photos{
+  width: 150px;
+  padding: 1px 1px 1px 1px;
+  zoom: 100%;
+}
+/* Add some padding inside the card container */
+.container {
+  width: 70%;
+  border-radius: 5%;
+}
+#date{
+  font-size: smaller;
+  color: gray;
+}
+    
+    </style>
+  
+    
+<script> 
+  
+
+
+// Show the div when the page is clicked
+
+ function showCont(event) { 
+  document.getElementByClassName('container').style.display = 'block';
+};
+
+document.getElementByClassName('tags').style.position = '';
+  
+  </script>
+<% 
+const tags = {title: 'this is title', timing: 'this shows timing', snippet: 'this is the snippet' };%>
+<% function styler(){ %>
+  
+<% } %>
+</script>
+<div id="big-cont">
+  <div class="card">
+    <div><img src="http://localhost:8080/public/2149176716.jpg"  class="photos"></div>
+    <div class="container">
+      <h4><b><%= tags.title %></b></h4>
+      <p><%= tags.snippet %></p>
+      <p id="date"><%= tags.timing %></p>
+
+    </div>
+  </div>
+
+  <div class="card">
+    <div><img src="http://localhost:8080/public/2149176716.jpg" class="photos"></div>
+    <div class="container">
+      <h4><b><%= tags.title %></b></h4>
+      <p><%= tags.snippet %></p>
+      <p id="date"><%= tags.timing %></p>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div><img src="http://localhost:8080/public/2149176716.jpg" class="photos"></div>
+    <div class="container">
+      <h4><b><%= tags.title %></b></h4>
+      <p><%= tags.snippet %></p>
+      <p id="date"><%= tags.timing %></p>
+
+  
+    </div>
+  </div>
+
+</div>
+</html>

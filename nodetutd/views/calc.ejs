@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        input{
+          width:30px;
+        }
+      </style>
+    </head>
+    <body>
+      
+        
+        <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+      <p><%= product  %> :  <span class="price" id="price_sold"><%= price %></span>   ||  <label>Quantity : </label>
+        <input id="quantity" onmouseleave="Calculate()" type="number"/></p>
+      <hr>
+      <script>
+        var priceSold = document.getElementById('price_sold').innerText;
+        var howMany = document.getElementById('quantity').value;
+var totalCost = howMany*priceSold;
+
+input.addEventlistener('onmouseleave', function(event){
+  event.preventDefault;
+})
+
+function Calculate(){
+document.getElementById('total').innerHTML = totalCost;
+}
+
+
+
+</script>
+      <% 
+  
+    
+      let pricing; 
+  
+      pricing = price; // Assuming price is a variable passed from the server-side
+     
+       %>
+     
+      <p>Total <span class="price" id="total" style="color:black"><b ></b></span></p>
+    
+    </body>
+
+</html>

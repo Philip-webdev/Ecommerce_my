@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<div><head><title>LÓ̩GBÓ̩N</title>
+    <script>
+        /* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+    </script>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+   
+/*@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}*/
+@media only screen and (min-width: 600px) {
+       
+        #list{
+        left: 0;
+        }
+        #help_logo{
+            left: 0;
+        }
+}
+    #sub{
+        display: inline;
+        
+         
+    }
+  
+        #slideContainer{
+            border-radius: 5%; 
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border: white;
+            margin: auto;
+           font-family:'Montserrat', sans-serif;
+        }
+    #eaderPanel{
+        position: fixed; 
+        background-color: white;
+        width: inherit;
+        font-family:'Montserrat', sans-serif;
+    }
+        #Slide{
+           width: 100%;
+           zoom: calc(100%);
+            height: 300px;
+            display: flex;
+            transition: transform 1s ease;
+            font-family:'Montserrat', sans-serif;
+        }
+        .overhead-text{
+            text-align: center;
+            font-weight: bold;
+            text-decoration:  1px black ;
+            cursor: pointer;
+    
+        }
+        .caption{
+            position: absolute;
+            top: 72%;
+            left: 24%;
+            font-size: smaller;
+            font-family:'Montserrat', sans-serif;
+        }
+        .caption1{
+            position: absolute;
+            top: 68%;
+            left: 40%;
+            font-size: smaller;
+            font-family:'Montserrat', sans-serif;
+        } .caption2{
+            position: absolute;
+            top: 72%; 
+            left: 59%;
+            font-size: smaller;
+            font-family:'Montserrat', sans-serif;
+        }
+        head{
+            background-color: white;
+            width: auto;
+        }
+        #help_logo{
+           margin-right: 15px;
+        }
+        #logo{
+            text-align: center;
+            font-size: small;
+            margin: auto ;  
+            width: 50%;    
+         }
+        #list{
+            left: 0;
+        }
+#arr-for{
+    background: none;
+    border: none;
+    zoom:35%;
+}
+        .product_case{
+            border-radius: 2%;
+            box-shadow: 0 3px 7px 0 rgba(0,0,0,0.2);
+            width: inherit;
+            height: auto;
+            font-family:'Montserrat', sans-serif;
+        }
+        .blog_case{
+           
+            box-shadow: 0 3px 7px 0 rgba(0,0,0,0.2);
+            border-radius: 2%;
+            width: inherit;
+            margin-top: 10px;
+            height: auto;
+            justify-content: space-around;
+            font-family:'Montserrat', sans-serif;
+        }
+        .education_case{
+            justify-content: flex-start;
+            border-radius: 2%;
+            box-shadow: 0 3px 7px 0 rgba(0,0,0,0.2);
+            height: auto;
+            margin-top: 10px;
+            width: inherit;
+            font-family:'Montserrat', sans-serif;
+        } 
+      
+        .vision{
+            display: inline-table;
+            height: 100px;
+           margin-left: 10%;
+            
+        }
+        #commerce{
+            margin-left: 0;
+        
+        }
+        #menu{
+            margin-left: 95%;
+            margin-right: 1%;
+        }
+        head{
+            background-color: white;
+            width: 100%;
+        }
+        #foot{
+            position: relative;
+        }
+       
+#headerPanel{
+    display: flex;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top:0;
+    margin:0;
+    margin-top: 0;
+}
+a{
+    text-decoration: none;
+    text-emphasis-color: none;
+    color: black;
+}
+        #products{
+            display: table-row;
+        }
+        
+    #about{
+        border-radius: 4%;
+        margin-left: 10%;
+        
+        justify-content: space-evenly;
+    }
+        /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  backdrop-filter: blur(20px);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+  
+    
+        </style>
+       
+          </head>
+        
+      <div id="headerPanel">
+        
+        <div id="list" type="button" onclick="openNav()">   
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="100%" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+
+        </div>
+        <div type="title" id="logo"><a href="/home"><b>LÓ̩GBÓ̩N</b></a></div>
+        <div id="help_logo"><img src="//localhost:8080/public/help_24dp_FILL0_wght400_GRAD0_opsz24.svg" width="100%" height="24px"/></div>
+    </div>
+     </div>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/shop">Products</a>
+    <a href="/blogs">Community</a>
+    <a href="#">Clients</a>
+    <a href="/checkout">Shopping/Orders</a>
+    <a href="#">Customer care</a>
+    <a href="/admin">Admin</a>
+  </div>
+
+  <!-- Use any element to open the sidenav   <span onclick="openNav()"></span>-->
+
+  
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+    <div>
+        <%- include('slide'); %>
+    </div>
+    
+    <% const About  = 'What we are made for' 
+        const product = 'Our Thrilling Products'
+        const  blog = 'Informative blogs'
+         const  education = 'Be an Erudite' %>
+    </br>
+    <div class="product_case">
+       <div class="overhead-text"><a href="/products"><%= product  %></a><input id="arr-for" type="image" src="http://localhost:8080/public/arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24.svg" /></div>
+        </br><%- include('products'); %>
+    </div>
+    </br>
+    </br>
+    <div class="blog_case">
+       <div class="overhead-text"><a href="/blogs"><%= blog %></a><input id="arr-for" type="image" src="http://localhost:8080/public/arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24.svg" /></div>
+        <div id="blogs"><%- include('blog-show'); %></div>
+    </div>
+    </br>
+    <div class="education_case">
+      <div class="overhead-text" ><a href="/edu"><%= education %></a><input id="arr-for" type="image" src="http://localhost:8080/public/arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24.svg" /> </div>
+        <div id="education">
+            <div id="blogs"><%- include('blog-show'); %></div>
+            </div>
+    </div>
+    </div>
+        <div id="go-to">
+    
+        </div>
+    
+    <div id="foot"><%- include('footer'); %></div>
+    
+  </div>
+</html>

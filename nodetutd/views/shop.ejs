@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+       
+    .cardd {
+        text-align: center;
+        border: 1px black;
+        background-color: whitesmoke;
+       
+      }
+      p{
+        text-decoration: none;
+        text-decoration-color: none;
+        text-underline-position: none;
+      }
+      a{
+        
+        pointer-events: painted;
+        text-decoration-color: white;
+      }
+      .cardd :hover{
+    
+        transition: 0.3s;
+      }
+      .price {
+        color: grey;
+      }
+      
+      .cardd button {
+        border: none;
+        outline: 0;
+        padding: 7px;
+         color: white;
+        background-color:black;
+        text-align: center;
+        pointer-events: none;
+        cursor: pointer;
+       
+      }
+      
+      
+      #bigg-cont{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-evenly;
+        font-family:'Montserrat', sans-serif;
+        font-size: medium;
+        
+      }
+      #market{
+        font-size: larger;
+        font-family:'Montserrat', sans-serif;
+       
+      }
+      .categories{
+        background-color: aqua;
+        margin: 10px;
+        padding-left: 10px;
+        color:rgb(24, 15, 15);
+        border-radius: 7%;
+        justify-content: space-around;
+        width: 60px;
+      }
+      #category{
+        display: flex;
+      }
+      </style>
+      <%- include('header'); %>
+</head></br></br>
+<% const market = 'Market' %>
+<div id="market"> <%= market %> <i class="fa fa-shopping-cart"></i></div>
+<div id="category">
+<div class="categories"> <%= market %></div><div class="categories"> <%= market %></div>
+<div class="categories"> <%= market %></div>
+</div>
+</br>
+</br>
+
+<div id="bigg-cont">
+    <div class="cardd">
+        <img src="http://localhost:8080/public/Slate%20Appliances%20as%20a%20New%20Kitchen%20Trend%20I%20MyHome%20Blog.png" alt="" width="150px"height='170px'>
+        <p class="product">Tailored Jeans</p>
+        <p class="price">$19.99</p>
+        <p>Some text about the jeans..</p>
+      <button class="addcart">Add to cart  </button>
+      </div>
+
+      <div class="cardd">
+        <img src="http://localhost:8080/public/HIGH%20DEFINITION%20TELEVISION.jpg" alt="" width="150px"height='170px'>
+        <p class="product">Tailored Jeans</p>
+        <p class="price">$19.99</p>
+        <p>Some text about the jeans..</p>
+       <button class="addcart">Add to cart</button>
+      </div>
+      <% Object.keys(products).forEach((key) => { %>
+        <%  const keys = Object.keys(products); %>
+       <% for (let key of keys) { %>
+      <div class="cardd">
+        <img src="http://localhost:8080/public/Travel%20Essentials%20%F0%9F%A7%B3.jpg" alt="" width="150px"height='170px'>
+      <p class="product"><%= products[key].title %></p>
+        <p class="price"><%= products[key].price %></p>
+        <p><%= products[key].description %></p>
+        <button class="addcart">Add to cart</button>
+      </div>
+      <% }})%>
+    </div>
+    <script>
+
+      function store()
+      {
+       
+       const product = document.getElementsByClassName('product').innerText;
+       const price = document.getElementsByClassName('price').innerText;
+       if (('localStorage' in window) && window['localStorage'] !== null) 
+      {
+      
+      localStorage.setItem('products', product);
+      localStorage.setItem('prices', price);
+      }
+      else
+      {
+          alert ('your browser does not support storage');
+      }
+      }
+     const toggleButton = document.querySelectorAll('.addcart');
+toggleButton.addEventListener('click', () =>{
+  store();
+});
+
+
+      function cancel_store()
+      {
+      if (('localStorage' in window) && window['localStorage'] !== null) 
+      {
+      localStorage.removeItem('products');
+      }
+      else
+      {
+      alert ('your browser does not support storage');
+      }
+      
+      }
+     
+       </script>
+</html>

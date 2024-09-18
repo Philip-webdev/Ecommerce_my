@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<head>
+ 
+      
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+       @media only screen and (min-width: 600px) {
+       
+       #list{
+       left: 0;
+       }
+       #help_logo{
+           left: 0;
+       }
+}
+        * {
+  box-sizing: border-box;
+}
+h1{
+  text-align: center;
+}
+html{
+  font-family:'Montserrat', sans-serif;
+}
+#headerPanel{
+        position: fixed;
+        background-color: white;
+        width:100%;
+        font-family:'Montserrat', sans-serif;
+  
+    }
+  
+/* Header/Blog Title */
+.header {
+  
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+#help_logo{
+           margin-right: 15px;
+        }
+        #logo{
+            text-align: center;
+            font-size: small;
+            margin: auto ;  
+            width: 50%;    
+         }
+        #list{
+            left: 0;
+        }
+#menuSvg{
+  width: 30px;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column
+.letcolumn {
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+}*/
+
+/* Right column */
+.rghtcolumn {
+  float: right;
+  
+}
+.eftcolumn > *{
+  flex: 1 1 160px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+ position: relative;
+  text-align: center;
+  background: #ddd;;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+.sidenav {
+  font-family:'Montserrat', sans-serif;
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  backdrop-filter: blur(20px);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+
+    </style>
+</head>
+  <%- include('header'); %>
+  
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <div id="main">
+    <div>
+      <h1><a href="/home"><img src="http://localhost:8080/public/arrow_back_24dp_FILL0_wght400_GRAD0_opsz24.svg"/></a></h1>
+      <div class="rw">
+
+
+        
+        <div>
+         
+          <%- include('blog card'); %>
+           
+      </div>
+          </div>
+    </div>
+      
+
+    <div>
+      
+      <div class="card">
+        <h3>Popular Post</h3>
+        <div class="fakeimg">  
+           <% Object.keys(blogs).forEach(() => { %>
+        <%  const keys = Object.keys(blogs); %>
+       <% for (let key of keys) { %>
+        <a href="/post/<%= blogs[key]._id %>">
+          <h1><%= blogs[key].title %></h1></a>
+          <p><%= blogs[key].snippet %></p>
+         <!--this body will be removed later, only the landing page should display the body, snippets exist for a reason--> 
+         <p><%= blogs[key].body %></p>
+      <% }})%></div><br>
+      </div>
+      <div class="card">
+        <h2>About Me</h2>
+        <div class="fakeimg" style="height:100px;">Image</div>
+        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      </div>
+
+      <div class="card">
+        <h3>Follow Me</h3>
+        <p>Some text..</p>
+      </div>
+    </div>
+   
+  </div>
+  </html>
