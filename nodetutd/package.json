@@ -18,6 +18,16 @@
     "@types/cookie-parser": "^1.4.7",
     "@types/express-session": "^1.18.0",
     "@types/passport-local": "^1.0.38",
+    "gh-pages": "^6.1.1",
     "webpack": "^5.91.0"
+  },
+
+"gh-pages": {
+  "homepage": "https://Philip-webdev.github.io/Ecommerce_my",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
+}
+
 }
